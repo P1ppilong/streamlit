@@ -1,0 +1,17 @@
+pip install 
+
+langchain 
+langchain-community
+langchain-core
+langchain-text-splitters
+
+streamlit-camera-input-live
+streamlit-card
+streamlit-chat
+streamlit-embedcode
+streamlit-extras
+streamlit-faker
+streamlit-image-coordinates
+streamlit-keyup
+streamlit-toggle-switch
+streamlit-vertical-slider
