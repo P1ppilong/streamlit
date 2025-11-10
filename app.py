@@ -14,7 +14,7 @@ if st.session_state.login != '':
 
 c1, c2 = st.columns(2)
 with c1:
-    st.image('./images/01.png')
+    st.image('https://imgur.com/cyhFOKI.png')
 with c2:
     t1, t2 = st.tabs(['Login', 'Register'])
     with t1: 
@@ -60,3 +60,4 @@ with c2:
                 else:
                     st.error('모든 정보를 입력해야 합니다.')
 st.info('copyfight(c) all rights reserved since 2025 powered by B3A2')
+
