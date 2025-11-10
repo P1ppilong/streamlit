@@ -42,8 +42,8 @@ else:
     if 'current_tab' not in st.session_state:
         st.session_state.current_tab = '남방 진동'
 
-    tabs = st.tabs(['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '엘리뇨와 라니냐 전망'])
-    tab_names = ['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '엘리뇨와 라니냐 전망']
+    tabs = st.tabs(['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '파일 업로드'])
+    tab_names = ['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '파일 업로드']
 
     for i, tab in enumerate(tabs):
         if tab_names[i] != st.session_state.current_tab:
@@ -100,67 +100,3 @@ else:
             '''
             st.markdown(txtdata_c2)
             st.image("https://imgur.com/wmYwzwb.png", use_container_width=True)
-
-        with st.expander('엘리뇨와 라니냐의 빈도 및 주기'):
-            st.subheader('엘리뇨의 빈도 및 주기')
-            html_table = """
-<table style="width:90%; margin:auto; border-collapse:collapse; font-size:16px;">
-  <tr style="background-color:#f0f2f6; text-align:center;">
-    <th style="border:1px solid #ccc; padding:8px;">항목</th>
-    <th style="border:1px solid #ccc; padding:8px;">내용</th>
-  </tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">발생 횟수</td><td style="border:1px solid #ccc; padding:8px;">1951년부터 2023년까지 총 24회</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">주기</td><td style="border:1px solid #ccc; padding:8px;">평균적으로 약 3년 주기</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">빈도</td><td style="border:1px solid #ccc; padding:8px;">1970년대 이후 발생 빈도가 높아짐</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">특징</td><td style="border:1px solid #ccc; padding:8px;">특히 1997~1998년, 2015~2016년, 2023년에 강한 엘니뇨(극값, 온도편차 2℃ 이상) 발생</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">특징</td><td style="border:1px solid #ccc; padding:8px;">지속기간은 보통 8개월~1년 반 정도, 최근 발생은 단기간보다 장기간 경향이 강화</td></tr>
-</table>
-"""
-            st.markdown(html_table, unsafe_allow_html=True)
-            st.markdown("<br>", unsafe_allow_html=True)
-            st.subheader('라니냐의 빈도 및 주기')
-            html_table2 = """
-<table style="width:90%; margin:auto; border-collapse:collapse; font-size:16px;">
-  <tr style="background-color:#f0f2f6; text-align:center;">
-    <th style="border:1px solid #ccc; padding:8px;">항목</th>
-    <th style="border:1px solid #ccc; padding:8px;">내용</th>
-  </tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">발생 횟수</td><td style="border:1px solid #ccc; padding:8px;">1954년부터 2023년까지 총 16회</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">주기</td><td style="border:1px solid #ccc; padding:8px;">평균적으로 약 4~5년 주기</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">빈도</td><td style="border:1px solid #ccc; padding:8px;">1970년대 후반과 2000년대 이후에 빈도 다소 증가</td></tr>
-  <tr><td style="border:1px solid #ccc; padding:8px;">특징</td><td style="border:1px solid #ccc; padding:8px;">특히 2010~2012년, 2020~2022년에는 연속된 라니냐가 발생하여 장기적인 기후 패턴 이상 초래</td></tr>
-</table>
-"""
-            st.markdown(html_table2, unsafe_allow_html=True)
-            st.markdown("<br>", unsafe_allow_html=True)
-            st.subheader('비교')
-            txtdata_c3 = '''
-            - 전체적으로 엘니뇨(24회)가 라니냐(16회)보다 더 자주 발생한다.
-- 엘니뇨는 강한 단일 이벤트(극단적 기온 상승)를 자주 보이는 반면, 라니냐는 상대적으로 지속적이고 완만한 기온 하강 패턴을 보인다.
-- 주기성에서 보면, 엘니뇨는 주기가 짧으나 강도가 세고, 라니냐는 긴 주기에 지속성이 길다는 특징이 나타난다.
-            '''
-            st.markdown(txtdata_c3)
-            st.markdown("<br>", unsafe_allow_html=True)
-            st.subheader('기후변화적 의미')
-            txtdata_c4 = '''
-최근 30년간(1990년대 이후) 엘니뇨·라니냐 모두 발생 주기가 짧아지고, 강도가 커졌다. 이는 엘니뇨 라니냐 현상이 지구온난화와 결합하여 전 세계적으로 폭염, 가뭄, 홍수, 태풍 등 극단적 기상 현상 발생 빈도를 높이는 주요 원인으로 작용하고 있음을 알 수 있다. 
-            '''
-            st.markdown(txtdata_c4)
-            st.markdown("<br>", unsafe_allow_html=True)
-
-    with tabs[4]:  
-        with st.expander('엘리뇨와 라니냐의 전망'):
-            st.subheader('2025. 08. 22 (금) 11:00 기준')
-
-            txtdata_c1 = """
-            **- 해수면 온도:**  
-            최근(8월 10일~16일) 해수면 온도 현황 - 열대 태평양의 엘니뇨·라니냐 감시구역의 해수면 온도는 26.6℃로, 평년보다 0.3℃ **낮은 상태**를 보이고 있다.  
-
-            **- 전망:**  
-            현재 엘니뇨도 라니냐도 아닌 **중립 상태**이며,  
-            전망 기간(2025년 9~11월) 동안 해수면 온도가 점차 하강하여 **약한 라니냐 경향**을 보일 것으로 예상된다.
-            """
-            st.markdown(txtdata_c1)
-
-            st.image("https://imgur.com/uVxIJgR.png", use_container_width=True)
-            st.markdown("<br>", unsafe_allow_html=True)
