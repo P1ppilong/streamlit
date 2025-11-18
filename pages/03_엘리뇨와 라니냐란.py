@@ -75,7 +75,7 @@ else:
  라니냐가 최고조로 발달하는 북반구의 겨울철에, 열대 서·중태평양에서 강수가 감소하고, 인도네시아 부근에서 강수가 뚜렷하게 증가한다. 남미 북부에서는 강수량이 증가, 남미 중·동부 지역에서는 감소하는 현상이 나타난다. 유라시아 북부와 캐나다 북부를 제외하고는 북반구에서 대체로 평상시보다 기온이 낮은 경향을 보이는 것이 특징이다.
             '''
             st.markdown(txtdata_c2)
-            st.image("https://imgur.com/undefined.png", use_container_width=True)
+            st.image("https://imgur.com/zQbmSym.png", use_container_width=True)
     
     with tabs[2]:  # 우리나라 기후에 미치는 영향
         with st.expander('우리나라 기후에 미치는 영향'):
@@ -101,3 +101,4 @@ else:
             st.markdown(txtdata_c2)
 
             st.image("https://imgur.com/wmYwzwb.png", use_container_width=True)
+
