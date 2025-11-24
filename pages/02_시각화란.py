@@ -27,7 +27,7 @@ def delete_note_from_csv(file_path, note_to_delete):
     df = df[df['content'] != note_to_delete]
     df.to_csv(file_path, index=False, encoding='cp949')
 
-st.subheader('시각화란')
+st.subheader('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
     if st.sidebar.button('로그아웃'):
@@ -85,3 +85,4 @@ else:
             with col4:
                 st.markdown(centered_image("https://i.imgur.com/nf7BchB.png"), unsafe_allow_html=True)
                 st.markdown("<p style='text-align:center;'>차트는 데이터의 패턴, 변화, 관계 등을 시각적으로 쉽게 이해할 수 있도록 도와주는 도구이다. 막대, 선, 파이 등 다양한 종류의 차트가 있다.</p>", unsafe_allow_html=True)
+
