@@ -5,7 +5,7 @@ if 'login' not in st.session_state:
     # {'login': ''}
 
 st.set_page_config(page_title='IP by AI', layout='wide')
-st.title('제목')
+st.title('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
     if st.sidebar.button('로그아웃'):
@@ -60,4 +60,5 @@ with c2:
                 else:
                     st.error('모든 정보를 입력해야 합니다.')
 st.info('copyfight(c) all rights reserved since 2025 powered by B3A2')
+
 
