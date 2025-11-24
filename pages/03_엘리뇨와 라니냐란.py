@@ -42,32 +42,30 @@ else:
     if 'current_tab' not in st.session_state:
         st.session_state.current_tab = '남방 진동'
 
-    tabs = st.tabs(['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '파일 업로드'])
-    tab_names = ['남방 진동', '엘리뇨와 라니냐', '우리나라 기후에 미치는 영향', '엘리뇨와 라니냐의 기준', '파일 업로드']
+    tabs = st.tabs(['엘리뇨와 라니냐', '엘리뇨와 라니냐의 기준'])
+    tab_names = ['엘리뇨와 라니냐', '엘리뇨와 라니냐의 기준']
 
     for i, tab in enumerate(tabs):
         if tab_names[i] != st.session_state.current_tab:
             log_user_activity(st.session_state.login, f"탭 '{tab_names[i]}' 선택")
             st.session_state.current_tab = tab_names[i]
-
-    with tabs[0]:  # 남방 진동
+      
+    with tabs[0]:  # 엘리뇨와 라니냐
         with st.expander('남방 진동'):
             st.subheader('남방 진동')
             txtdata_c1 = '''
             남방 진동이란 동태평양에서 기압이 상승하거나 하강하면, 반대로 서태평양에서는 기압이 하강하거나 상승하는 것이다.
             '''
             st.markdown(txtdata_c1)
-
-    with tabs[1]:  # 엘리뇨와 라니냐
-        with st.expander('엘리뇨와 라니냐 1'):
-            st.subheader('엘리뇨와 라니냐 정의')
+        with st.expander('엘리뇨와 라니냐의 정의'):
+            st.subheader('엘리뇨와 라니냐의 정의')
             txtdata_c1 = '''
             평소 서태평양의 해수면 온도는 높고 동태평양은 상대적으로 낮아 서고-동저의 해수면온도 분포를 보인다. 대기에서는 적도를 따라 무역풍이 동쪽에서 서쪽으로 불고 있으며, 서태평양에서 대류활동이 활발하게 나타난다.
  2-5년마다 상대적으로 낮았던 열대 동태평양과 중태평양의 해수면온도가 평상시보다 높은 상태로 수개월이상 지속되는 현상이 나타는데 이를 엘니뇨라 한다. 엘니뇨는 대체로 봄~여름철에 발생해 겨울까지 발달하다가 이후 점차 약해지며, 이듬해 봄∼여름철에 소멸하는 경향을 보인다. 이 시기에 적도 태평양의 무역풍은 약해지고 강한 대류활동 영역이 서태평양에서 중태평양으로 확장·이동하게 된다. 대기의 변화로 인해 해양에서는 동태평양에서 수온약층이 깊어지고 해수면온도가 상승해 다시 대기의 변화를 유도한다. 라니냐는 엘니뇨의 반대 현상으로 중동태평양의 해수면온도가 평상시보다 낮아지고 무역풍이 평소보다 강해진다.
             '''
             st.markdown(txtdata_c1)
 
-        with st.expander('엘리뇨와 라니냐 2'):
+        with st.expander('엘리뇨와 라니냐의 전지구 기후 관련성'):
             st.subheader('엘리뇨와 라니냐의 전지구 기후 관련성')
             txtdata_c2 = '''
             엘니뇨·라니냐는 열대 태평양에 국한되어 나타나는 현상이지만, 대기와 해양을 통해 전 지구 기상·기후에 영향을 미치게 되며, 그 영향은 지역과 계절에 따라 다르게 나타난다.
@@ -76,16 +74,15 @@ else:
             '''
             st.markdown(txtdata_c2)
             st.image("https://imgur.com/zQbmSym.png", use_container_width=True)
-    
-    with tabs[2]:  # 우리나라 기후에 미치는 영향
+            
         with st.expander('우리나라 기후에 미치는 영향'):
             st.subheader('우리나라 기후에 미치는 영향')
             txtdata_c1 = '''
             엘니뇨·라니냐가 발달하는 시기의 우리나라 여름철 강수 변화는 월별로 차이가 있지만, 7월 중순부터 8월 중순까지 엘니뇨 시기에 우리나라 강수가 증가하고, 라니냐 시기에는 강수가 감소하는 경향이 한반도 남부 지역을 중심으로 나타난다. 엘니뇨가 최대로 발달하는 이른 겨울철(11, 12월)에 한반도의 강수는 증가하고 기온은 상승하는 경향 보인다. 11월 강수가 평년의 2배 이상인 100 ㎜ 이상 내렸던 해는 1982, 1997, 2015년으로 모두 엘니뇨가 강하게 발달했던 해이다. 라니냐 시기의 11월과 12월에 강수가 감소하고, 기온이 하강하는 경향을 보인다.
             '''
             st.markdown(txtdata_c1)
-
-    with tabs[3]:  # 엘리뇨와 라니냐의 기준
+    
+    with tabs[1]:  # 엘리뇨와 라니냐의 기준
         with st.expander('엘리뇨와 라니냐의 기준'):
             st.subheader('엘리뇨와 라니냐의 기준')
             txtdata_c1 = '''
@@ -101,5 +98,6 @@ else:
             st.markdown(txtdata_c2)
 
             st.image("https://imgur.com/wmYwzwb.png", use_container_width=True)
+
 
 
