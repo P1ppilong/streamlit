@@ -36,7 +36,7 @@ def delete_note_from_csv(file_path, note_to_delete):
 # -----------------------------
 # 로그인 확인
 # -----------------------------
-st.subheader('제목')
+st.subheader('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
     if st.sidebar.button('로그아웃'):
@@ -155,4 +155,5 @@ else:
         st.success('다음 차시 예고')
         url = 'https://youtu.be/xuOny2OIiC0?si=Fd7DflFqui6bfj3K'
         st.video(url)
+
 
