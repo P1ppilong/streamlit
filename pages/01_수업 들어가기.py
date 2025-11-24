@@ -16,7 +16,7 @@ def filteringApp(df, userid):
     else:
         return df[df['userid'] == userid]
 
-st.subheader('제목')
+st.subheader('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
     if st.sidebar.button('로그아웃'):
@@ -80,3 +80,4 @@ else:
     """
 
         st.markdown(html, unsafe_allow_html=True)
+
