@@ -40,22 +40,12 @@ else:
             st.session_state.current_tab = tab_names[i]
 
     with tabs[0]: #지난 시간에 우리는
-        c1, c2 = st.columns((5, 5))
-        with c1:
-            with st.expander('지난 시간 복습'):
-                st.subheader('자료 수집 및 분석 방법')
-                txtdata_c1 = '''
-                자료 수집 및 분석 방법에는 검색 엔진 활용, 전문기관 자료 활용, 온라인 설문 활용, 측정 및 실험 활용 등이 있습니다. 
+        with st.expander('지난 시간 복습'):
+            st.subheader('자료 수집 및 분석 방법')
+            txtdata_c1 = '''
+            자료 수집 및 분석 방법에는 검색 엔진 활용, 전문기관 자료 활용, 온라인 설문 활용, 측정 및 실험 활용 등이 있습니다. 
 '''
-                st.markdown(txtdata_c1)
-        with c2:
-            with st.expander('관련 과목'):
-                st.subheader('관련 단원 및 성취 기준')
-                txtdata_c2 = '''
-                고등 정보 Ⅱ. 자료와 정보 / 2. 자료와 정보의 분석, 관리 / 2-1 자료와 정보의 수집 및 분석
-                [12정보02-02] 컴퓨팅 환경에서 생산되는 방대하고 복잡한 종류의 자료들을 수집, 분석, 활용하기 위한 컴퓨팅 기술의 역할과 중요성을 이해한다.
-'''
-                st.markdown(txtdata_c2)
+            st.markdown(txtdata_c1)
 
     with tabs[1]: #학습목표
         html = """
@@ -80,4 +70,5 @@ else:
     """
 
         st.markdown(html, unsafe_allow_html=True)
+
 
