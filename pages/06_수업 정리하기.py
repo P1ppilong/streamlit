@@ -33,9 +33,6 @@ def delete_note_from_csv(file_path, note_to_delete):
     df = df[df['content'] != note_to_delete]
     df.to_csv(file_path, index=False, encoding='cp949')
 
-# -----------------------------
-# 로그인 확인
-# -----------------------------
 st.subheader('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
@@ -48,24 +45,12 @@ else:
 
     log_user_activity(st.session_state.login, '로그인')
 
-    # -----------------------------
-    # 탭 구성
-    # -----------------------------
     tab1, tab2 = st.tabs(['정리하기', '다음차시 예고'])
-
-    # -----------------------------
-    # 탭 1 : 연습 문제 + 채점
-    # -----------------------------
     with tab1:
 
         # ⚠ success 박스에는 텍스트만 넣기!
         st.success('연습 문제를 통해 배운 내용 정리 및 복습')
         st.markdown("아래 연습 문제를 풀어보고 채점해봅시다!")
-
-        # -----------------------------
-        # 문제 UI (success 박스 밖으로 빼기)
-        # -----------------------------
-
         st.write("## 1. 엘니뇨(El Niño)와 라니냐(La Niña)의 주요 차이를 올바르게 설명한 것은 무엇인가?")
         q1 = st.radio("객관식", ["① 엘니뇨는 해수 온도가 낮아지고, 라니냐는 해수 온도가 높아진다.", "② 엘니뇨는 해수 온도가 높아지고, 라니냐는 해수 온도가 낮아진다", "③ 두 현상 모두 해수 온도가 높아지는 현상이다.", "④ 엘니뇨와 라니냐는 모두 기온에 영향을 주지 않는다."], index=None)
 
@@ -155,5 +140,6 @@ else:
         st.success('다음 차시 예고')
         url = 'https://youtu.be/xuOny2OIiC0?si=Fd7DflFqui6bfj3K'
         st.video(url)
+
 
 
