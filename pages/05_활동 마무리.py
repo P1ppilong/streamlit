@@ -28,7 +28,7 @@ def delete_note_from_csv(file_path, note_to_delete):
     df = df[df['content'] != note_to_delete]
     df.to_csv(file_path, index=False, encoding='cp949')
 
-st.subheader('제목')
+st.subheader('엘니뇨 라니냐에 대한 데이터 분석')
 
 if st.session_state.login != '':
     if st.sidebar.button('로그아웃'):
@@ -82,3 +82,4 @@ else:
             st.markdown(txtdata_c2)
             url = 'https://padlet.com/susan053021/class-activities-sfflhnru5ew5ndbc'
             components.iframe(url, width=1400, height=768)
+
