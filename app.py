@@ -59,6 +59,7 @@ with c2:
                     st.success('등록 성공')
                 else:
                     st.error('모든 정보를 입력해야 합니다.')
-st.info('copyfight(c) all rights reserved since 2025 powered by B3A2')
+st.info('copyfight(c) all rights reserved since 2025 powered by B2A3')
+
 
 
